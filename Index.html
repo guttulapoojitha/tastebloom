@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TasteBloom | Where Flavors Blossom</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fffdf9;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#b76e79,#f5d6c6);
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:white;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:white;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRVgeqkQ9juNOYorNXL2reRR-KebgNWN28mdWn2YWp_Q&s=10');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-size:65px;
+margin-bottom:10px;
+}
+
+.hero-content h2{
+font-size:28px;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 35px;
+background:#b76e79;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:42px;
+color:#b76e79;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:45%;
+border-radius:20px;
+margin-left:23%;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.contact{
+background:#fff4ef;
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+footer{
+background:#b76e79;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.delivery-banner{
+background:#8b4513;
+color:white;
+text-align:center;
+padding:15px;
+font-size:18px;
+font-weight:600;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.whatsapp img {
+height: 59px;
+border-radius: 73px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content h2{
+font-size:22px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+}
+
+.instaID {
+text-decoration: none;
+ color: black;
+}
+
+.contact img {
+    height: 21px;
+    object-fit: cover;
+    border-radius: 108px;
+    position: absolute;
+    margin-left: -92px;
+    margin-top: 4px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">TasteBloom</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#gallery">Gallery</a>
+<a href="#why">Why Us</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>TasteBloom</h1>
+<h2>Where Flavors Blossom</h2>
+
+<p>
+Handcrafted sweets made with love and premium ingredients.
+Experience the richness of Apricodelight, the crunch of Chekkies,
+and the indulgence of Funaffa Chocolates.
+</p>
+
+<a href="#products" class="btn">Explore Products</a>
+
+</div>
+</section>
+
+<div class="delivery-banner">
+🚚 Free Delivery Within 3 KM of Madhapur | Freshly Prepared & Delivered To Your Doorstep
+</div>
+
+<section id="about">
+
+<div class="section-title">
+<h2>About TasteBloom</h2>
+</div>
+
+<div class="about">
+
+<img src="YOUR_ABOUT_IMAGE.jpg">
+
+<div>
+<p>
+At TasteBloom, every sweet is handcrafted with passion and care.
+We specialize in premium homemade delights that combine
+traditional flavors with modern presentation.
+</p>
+
+<br>
+
+<p>
+Our mission is to bring joy to every celebration through
+freshly prepared sweets delivered right to your doorstep.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="products">
+
+<div class="section-title">
+<h2>Our Signature Products</h2>
+</div>
+
+<div class="products">
+
+<div class="card">
+<img src="YOUR_APRICODELIGHT_IMAGE.jpg">
+<div class="card-content">
+<h3>Apricodelight</h3>
+<p>Rich layered apricot dessert with irresistible taste.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="YOUR_CHEKKIES_IMAGE.jpg">
+<div class="card-content">
+<h3>Chekkies</h3>
+<p>Crunchy nut-filled traditional sweet delight.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="YOUR_FUNAFFA_IMAGE.jpg">
+<div class="card-content">
+<h3>Funaffa Chocolates</h3>
+<p>Premium handcrafted chocolates made with love.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="section-title">
+<h2>Gallery</h2>
+</div>
+
+<div class="gallery">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+
+</div>
+
+</section>
+
+<section id="why">
+
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div>
+
+<div class="features">
+
+<div class="feature">
+<h3>Fresh Daily</h3>
+<p>Prepared fresh for every order.</p>
+</div>
+
+<div class="feature">
+<h3>Premium Ingredients</h3>
+<p>Only the finest quality ingredients.</p>
+</div>
+
+<div class="feature">
+<h3>Homecrafted</h3>
+<p>Authentic homemade taste and quality.</p>
+</div>
+
+<div class="feature">
+<h3>Quick Delivery</h3>
+<p>Fast delivery around Madhapur.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<div class="section-title">
+<h2>Customer Reviews</h2>
+</div>
+
+<div class="reviews">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Absolutely loved the Apricodelight!"</p>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Amazing chocolates and beautiful packaging."</p>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Fresh, tasty and delivered on time."</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+</div>
+
+<p>📞 +91 9948574714</p>
+
+<p>📧 tastebloom.in@gmail.com</p>
+
+<a class="instaID" href="https://www.instagram.com/taste__bloom?utm_source=qr&igsh=MWtjcnp3dW13bTdscg==">
+<img src="insta.jpg">
+<p>: @TasteBloom</p>
+</a>
+
+<p>📍 Madhapur, Hyderabad</p>
+
+</section>
+
+<footer>
+
+<h3>TasteBloom</h3>
+<p>Where Flavors Blossom</p>
+
+<p>© 2026 TasteBloom. All Rights Reserved.</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919948574714"
+target="_blank">
+<img src="whatsapp.jpg">
+</a>
+
+</body>
+</html>
